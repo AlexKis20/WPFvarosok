@@ -1,0 +1,136 @@
+﻿<Window x:Class="WPFvarosok.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFvarosok"
+        mc:Ignorable="d"
+        Title="Városok 1.0" Height="800" Width="600" FontSize="20" Background="Aqua" >
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label
+            Content="Magyarország városai"
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            FontSize="20"
+            FontWeight="Bold"
+            />
+        <ListBox
+            x:Name="lb_varosok"
+            Grid.Row="1"
+            Grid.Column="0"
+            Height="700"
+            Margin="5" SelectionChanged="lb_varosok_SelectionChanged"
+            Grid.RowSpan="2"
+            Background="Green"
+            />
+
+        <Label
+            Content="Keresés"
+            Grid.Row="1"
+            Grid.Column="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            Margin="20 -115 0 0"
+            Panel.ZIndex="1"
+            Background="Aqua"
+            Width="auto"
+            FontWeight="DemiBold"
+            />
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="5"
+            VerticalAlignment="Center"
+            BorderBrush="Gray"
+            BorderThickness="1"
+            CornerRadius="10"
+            Padding="10"
+            Panel.ZIndex="0"
+            >
+            <StackPanel
+                Orientation="Vertical"
+                >
+                <TextBox
+                    x:Name="tbx_kereses"
+                    Margin="5"
+                    />
+                <Button
+                    x:Name="btn_kereses"
+                    Margin="5"
+                    Content="Keresés"
+                    Background="Bisque"
+                    FontWeight="Bold" Click="btn_kereses_Click"
+                    IsDefault="True"
+                    />
+            </StackPanel>
+        </Border>
+
+        <Label
+            Content="Városadatok"
+            Grid.Row="2"
+            Grid.Column="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            Margin="20 -195 0 0"
+            Panel.ZIndex="1"
+            Background="Aqua"
+            Width="auto"
+            FontWeight="DemiBold"
+            />
+        
+        <Border
+            Grid.Row="2"
+            Grid.Column="1"
+            VerticalAlignment="Center"
+            BorderBrush="Gray"
+            BorderThickness="1"
+            CornerRadius="10"
+            Padding="10"
+            Panel.ZIndex="1"
+            >
+            <StackPanel
+            Orientation="Vertical"
+            Margin="5"
+            VerticalAlignment="Center"
+            >
+                <TextBlock
+                Name="tbl_nev"
+                Text="Város: "
+                Margin="0 5 0 0"
+                />
+                <TextBlock
+                Name="tbl_jaras"
+                Text="Járás: "
+                Margin="0 5 0 0"
+                />
+                <TextBlock
+                Name="tbl_kisterseg"
+                Text="Kistérség: "
+                Margin="0 5 0 0"
+                />
+                <TextBlock
+                Name="tbl_nepesseg"
+                Text="Népesség: "
+                Margin="0 5 0 0"
+                />
+                <TextBlock
+                Name="tbl_terulet"
+                Text="Terület: "
+                Margin="0 5 0 0"
+                />
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
