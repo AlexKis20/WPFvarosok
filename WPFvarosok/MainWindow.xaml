@@ -41,7 +41,7 @@
             Grid.Column="1"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
-            Margin="20 -115 0 0"
+            Margin="20 -150 0 0"
             Panel.ZIndex="1"
             Background="Aqua"
             Width="auto"
@@ -73,6 +73,14 @@
                     FontWeight="Bold" Click="btn_kereses_Click"
                     IsDefault="True"
                     />
+                <Button
+                    x:Name="btn_ujkereses"
+                    Margin="5"
+                    Content="Új keresés"
+                    Background="Bisque"
+                    FontWeight="Bold" 
+                    IsDefault="True" Click="btn_ujkereses_Click"
+                    />
             </StackPanel>
         </Border>
 
@@ -97,7 +105,7 @@
             BorderThickness="1"
             CornerRadius="10"
             Padding="10"
-            Panel.ZIndex="1"
+            Panel.ZIndex="0"
             >
             <StackPanel
             Orientation="Vertical"

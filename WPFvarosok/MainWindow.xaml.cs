@@ -88,10 +88,25 @@ namespace WPFvarosok
             if (tbx_kereses.Text!="")
             {
                 lb_varosok.Items.Clear();
-                lb_varosok.ItemsSource = keresetVarosok;
+                //lb_varosok.ItemsSource = keresetVarosok;
+                foreach (var item in keresetVarosok)
+                {
+                    lb_varosok.Items.Add(item);
+                }
                 tbx_kereses.Clear();
             }
             
+        }
+
+        private void btn_ujkereses_Click(object sender, RoutedEventArgs e)
+        {
+            lb_varosok.SelectedItem = null;
+            lb_varosok.Items.Clear();
+            foreach (var item in varosok)
+            {
+                lb_varosok.Items.Add(item.Varosnev);
+
+            }
         }
     }
 }
